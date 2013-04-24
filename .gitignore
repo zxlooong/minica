@@ -1,0 +1,78 @@
+#   zxlooong@gmail.com	
+
+#### this project
+output/
+tmp_tmp/
+MCdemo/
+Mc2Demo/
+
+#### tmp files & folders
+output/
+tmp_tmp/
+tmptmp/
+tmp/
+to_tidy/
+.*.swp   #vim
+*~
+.gitignore
+*.class
+~$*  #MSoffice
+
+
+#### windows
+~$*
+desktop.ini
+thumbs.db
+
+#### unix hide files
+#.*
+#.*/
+*.o
+
+#### macosx
+.DS_Store
+*.DS_Store
+._*
+
+#### vc
+ipch/
+Release/
+ReleaseU/
+Release Unicode/
+ReleaseMinDependency/
+ReleaseUMinDependency/
+Debug/
+DebugU/
+Debug Unicode/
+DebugMinDependency/
+DebugUMinDependency/
+*.aps
+*.opt
+*.ncb
+*.plg
+*.positions
+*.dsw
+*.sln
+*.suo
+*.sdf
+*.opensdf
+*.vcxproj.filters
+*.vcxproj.user
+*_i.c
+*_i.h
+*.vcproj.*
+
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
