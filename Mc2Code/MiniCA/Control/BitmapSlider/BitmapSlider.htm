@@ -1,0 +1,2617 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://www.codeproject.com/staticctrl/CBitmapSlider.asp -->
+<HTML><HEAD><TITLE>The Code Project - CBitmapSlider - Static Controls</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content=en-US name=MS.LOCALE>
+<META http-equiv=Reply-to content=mailto:webmaster@codeproject.com>
+<META 
+content="A CStatic derived class that has slider functions. It is skinned using bitmaps." 
+name=Description>
+<META 
+content="Free source code, Static Controls, Visual C++, MFC, Windows, Control, CStatic, Bitmap, CSliderCtrl, MFC" 
+name=keywords>
+<META 
+content="Article content copyright Junho Ryu, 2003, everthing else Copyright © CodeProject, 1999-2005, All Rights Reserved." 
+name=Copyright><LINK title="CodeProject Latest articles - All topics" 
+href="http://www.codeproject.com/webservices/articlerss.aspx?cat=1" 
+type=application/rss+xml rel=alternate><LINK 
+title="CodeProject Latest articles - MFC / C++" 
+href="http://www.codeproject.com/webservices/articlerss.aspx?cat=2" 
+type=application/rss+xml rel=alternate><LINK 
+title="CodeProject Latest articles - C#" 
+href="http://www.codeproject.com/webservices/articlerss.aspx?cat=3" 
+type=application/rss+xml rel=alternate><LINK 
+title="CodeProject Latest articles - ASP.NET" 
+href="http://www.codeproject.com/webservices/articlerss.aspx?cat=4" 
+type=application/rss+xml rel=alternate><LINK 
+title="CodeProject Latest articles - .NET" 
+href="http://www.codeproject.com/webservices/articlerss.aspx?cat=5" 
+type=application/rss+xml rel=alternate><LINK href="/favicon.ico" type=image/ico 
+rel=icon><LINK href="/favicon.ico" rel="SHORTCUT ICON"><LINK 
+href="BitmapSlider_files/global.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="BitmapSlider_files/oncopy.js"></SCRIPT>
+
+<META content="MSHTML 6.00.3790.0" name=GENERATOR></HEAD>
+<BODY oncopy="return copyCode();" text=black vLink=purple aLink=red link=blue 
+bgColor=white leftMargin=3 topMargin=3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#ff9900 border=0>
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      <TABLE cellSpacing=1 cellPadding=0 width="100%" bgColor=#ff9900 
+        border=0><TBODY>
+        <TR>
+          <TD vAlign=top><A href="http://www.codeproject.com/"><IMG height=72 
+            alt="The Code Project" src="BitmapSlider_files/logo225x72.gif" 
+            width=225 border=0></A></TD>
+          <TD align=right><SPAN id=AdBanner4>
+            <TABLE cellSpacing=0 cellPadding=0>
+              <TBODY>
+              <TR>
+                <TD><A class=AdLink 
+                  href="http://www.codeproject.com/script/admentor/ads.asp">View 
+                  our advertisers</A></TD>
+                <TD align=right><A class=AdLink 
+                  href="http://www.codeproject.com/info/mediakit">Advertise with 
+                  us</A></TD></TR>
+              <TR>
+                <TD colSpan=2>
+                  <SCRIPT language=javascript>document.write("<a href=\"/script/admentor/admentorredir.asp?id=402&way=ban\" target=_blank><img src=\"/script/admentor/include/ServeAd.aspx?File=%2Fscript%2Fadmentor%2Fimages%2Fvsnet468x60%5Fmfc%2Egif&C=False&id=402\" alt=\"Support Code Project and purchase Visual Studio .NET from $899\" border=0 width=468 height=60></a>");</SCRIPT>
+                </TD></TR></TBODY></TABLE></SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#fbedbb colSpan=2>
+            <TABLE cellPadding=3 width="100%" bgColor=#fbedbb border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="100%"><FONT style="FONT-SIZE: 8pt"><A 
+                  href="http://www.codeproject.com/?cat=1">All Topics</A>, <A 
+                  href="http://www.codeproject.com/?cat=2">MFC / C++</A> 
+                  &gt;&gt; <A 
+                  href="http://www.codeproject.com/staticctrl/">Static 
+                  Controls</A> &gt;&gt; <A 
+                  href="http://www.codeproject.com/staticctrl/#Custom+Controls">Custom 
+                  Controls</A></FONT><BR><BR><B><FONT style="FONT-SIZE: 16pt" 
+                  size=4>CBitmapSlider</FONT></B><BR><B>By <A 
+                  href="http://www.codeproject.com/script/profile/whos_who.asp?id=213071">Junho 
+                  Ryu</A> </B><BR><BR><FONT style="FONT-SIZE: 9pt">A CStatic 
+                  derived class that has slider functions. It is skinned using 
+                  bitmaps.&nbsp;</FONT> </TD>
+                <TD vAlign=top align=right>
+                  <TABLE cellSpacing=0 cellPadding=1 width=200 border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD>&nbsp;</TD>
+                      <TD class=SmallText>C++ (VC6)<BR>Windows (WinXP, Win2K, 
+                        Win95, Win98, WinME)<BR>MFC, Win32, VS<BR>Dev</TD></TR>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=SmallText noWrap>Posted 27 Aug 2003</TD></TR>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=SmallText>Updated 19 Sep 2003</TD></TR>
+                    <TR vAlign=top>
+                      <TD><IMG height=16 src="BitmapSlider_files/hlp.gif" 
+                        width=16></TD>
+                      <TD class=SmallText noWrap><A 
+                        href="http://www.codeproject.com/script/Articles/list_articles.asp?userid=213071">Articles 
+                        by this author</A></TD></TR>
+                    <TR vAlign=top>
+                      <TD></TD>
+                      <TD class=SmallText noWrap><B>58,047</B> 
+                    views</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD colSpan=2>
+            <TABLE id=tblSiteToolbar cellSpacing=0 cellPadding=1 width="100%" 
+            border=0>
+              <TBODY>
+              <TR>
+                <FORM name=Search action=/info/search.asp method=post>
+                <TD vAlign=top align=left width="100%">
+                  <TABLE cellSpacing=0 cellPadding=1 border=0>
+                    <TBODY>
+                    <TR vAlign=center>
+                      <TD class=smallText><B><FONT 
+                        color=white>Search:</FONT></B></TD>
+                      <TD class=navbar noWrap><INPUT class=smallText 
+                        maxLength=255 size=18 name=target></TD>
+                      <TD vAlign=top><SELECT class=smallText name=st> 
+                          <OPTION value=kw selected>Articles</OPTION> <OPTION 
+                          value=au>Authors</OPTION></SELECT></TD>
+                      <TD><INPUT class=formButton type=submit value=Go></TD></TR></TBODY></TABLE></TD></FORM>
+                <TD>
+                  <DIV id=MenuPos 
+                  style="WIDTH: 380px; POSITION: relative; HEIGHT: 20px">
+                  <TABLE height=20 cellSpacing=0 cellPadding=2 width=375>
+                    <TBODY>
+                    <TR>
+                      <TD><A class=NavMenuItem 
+                        href="http://www.codeproject.com/info/faq.asp">Help!</A></TD>
+                      <TD><A class=NavMenuItem 
+                        href="http://www.codeproject.com/info/latest.asp">Articles</A></TD>
+                      <TD><A class=NavMenuItem 
+                        href="http://www.codeproject.com/script/comments/forums.asp">Message 
+                        Boards</A></TD>
+                      <TD><A class=NavMenuItem 
+                        href="http://www.codeproject.com/store/">StoreFront</A></TD>
+                      <TD><A class=NavMenuItem 
+                        href="http://www.codeproject.com/lounge.asp">Lounge</A></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+            <SCRIPT type=text/javascript>function Go(){return}</SCRIPT>
+
+            <SCRIPT src="BitmapSlider_files/cpmenu_var.js" 
+            type=text/javascript></SCRIPT>
+
+            <SCRIPT src="BitmapSlider_files/menu10_com.js" 
+            type=text/javascript></SCRIPT>
+          </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=1 border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD vAlign=top bgColor=#fbedbb rowSpan=2>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <SCRIPT language=javascript>
+function ErrorHandle() {}
+window.onerror = ErrorHandle;
+
+function OnNLSubmit(option)
+{
+	if (option=="up")
+		document.subForm.action = "/script/profile/modify.asp?ct=%2Fstaticctrl%2FCBitmapSlider%2Easp";
+	else if (option=="in")
+		document.subForm.action = "/script/profile/process_logon.asp?ct=%2Fstaticctrl%2FCBitmapSlider%2Easp";
+	document.subForm.submit();
+	return true;
+}
+</SCRIPT>
+
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE cellSpacing=3 cellPadding=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD></TD>
+                <TD></TD></TR>
+              <TR vAlign=top>
+                <TD></TD>
+                <TD class=InfoBarHeader>Toolbox</TD></TR>
+              <TR>
+                <TD bgColor=black colSpan=2><IMG height=1 
+                  src="BitmapSlider_files/space.gif" width=1></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/sitebuild_icon.gif" 
+                  width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/script/submit/ReportProblem.asp?GUID=CBitmapSlider%2Fstaticctrl8%2F27%2F2003">Broken 
+                  Article?</A></TD></TR>
+              <TR vAlign=top>
+                <TD></TD>
+                <TD></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/support_icon.gif" 
+                  width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/store/"><B>VS.NET 2003 from 
+                  $899</B></A></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/support_icon.gif" 
+                  width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/store/"><B>Ultimate Toolbox 
+                  $499</B></A></TD></TR>
+              <TR vAlign=top>
+                <TD></TD>
+                <TD></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/print.gif" 
+                width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?print=true" 
+                  target=_print>Print version</A></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/link.gif" 
+                width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/script/profile/add_bookmark.asp?t=0&amp;ct=%2Fstaticctrl%2FCBitmapSlider%2Easp&amp;guid=CBitmapSlider%2Fstaticctrl8%2F27%2F2003">Bookmark 
+                  this</A></TD></TR></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/mail.gif" 
+                width=16></TD>
+                <TD class=SmallText><A 
+                  href="http://www.codeproject.com/script/recommend/form.asp?guid=CBitmapSlider%2Fstaticctrl8%2F27%2F2003">Send 
+                  to a friend</A></TD></TR>
+              <TR vAlign=top>
+                <TD></TD>
+                <TD></TD></TR>
+              <TR vAlign=top>
+                <TD></TD>
+                <TD class=InfoBarHeader>My Profile</TD></TR>
+              <TR>
+                <TD bgColor=black colSpan=2><IMG height=1 
+                  src="BitmapSlider_files/space.gif" width=1></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/profile_small.gif" 
+                  width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/script/profile/modify.asp?ct=/staticctrl/CBitmapSlider.asp">My 
+                  Settings</A></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/submit_small.gif" 
+                  width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/script/articles/list_articles.asp?userid=309522">My 
+                  Articles</A></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/bookmarks.gif" 
+                  width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/script/profile/bookmark_list.asp">My 
+                  Bookmarks</A></TD></TR>
+              <TR vAlign=top>
+                <TD><IMG height=16 src="BitmapSlider_files/logoff_small.gif" 
+                  width=16></TD>
+                <TD class=smallText><A 
+                  href="http://www.codeproject.com/script/profile/logoff.asp?ct=/staticctrl/CBitmapSlider.asp">Sign 
+                  out</A></TD></TR>
+              <TR>
+                <TD bgColor=black colSpan=2><IMG height=1 
+                  src="BitmapSlider_files/space.gif" 
+          width=1></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD>&nbsp;</TD></TR>
+        <TR>
+          <TD>
+            <CENTER>
+            <SCRIPT language=javascript>document.write("<IFRAME src=\"/script/admentor/include/ServeAdHTML.aspx?C=False&id=1288\" border=0 frameborder=0 scrolling=no width=120 height=600></IFRAME>");</SCRIPT>
+            <BR></CENTER><BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=5 rowSpan=2><IMG height=1 src="BitmapSlider_files/space.gif" 
+      width=5> </TD>
+    <TD align=right width="100%" bgColor=white>
+      <TABLE width="100%">
+        <TBODY>
+        <TR vAlign=top>
+          <TD class=smallText vAlign=top noWrap></TD>
+          <TD noWrap align=right><A name=__top></A>
+            <TABLE>
+              <TBODY>
+              <TR>
+                <TD class=smallText align=right>54 members have rated this 
+                  article. Result:</TD>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 border=2>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=5 src="BitmapSlider_files/red.gif" 
+                        width=20 border=0></TD>
+                      <TD><IMG height=5 src="BitmapSlider_files/red.gif" 
+                        width=20 border=0></TD>
+                      <TD><IMG height=5 src="BitmapSlider_files/red.gif" 
+                        width=20 border=0></TD>
+                      <TD><IMG height=5 src="BitmapSlider_files/red.gif" 
+                        width=20 border=0></TD>
+                      <TD><IMG height=5 src="BitmapSlider_files/red.gif" 
+                        width=14 border=0><IMG height=5 
+                        src="BitmapSlider_files/white.gif" width=6 
+                    border=0></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD class=smallText align=right colSpan=2><A 
+                  title="Calculated as rating x Log10(# votes)" 
+                  href="http://www.codeproject.com/script/articles/top_articles.asp?st=2">Popularity: 
+                  8.13</A>. Rating: <B>4.69</B> out of 
+        5.</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=top width="100%">
+      <DIV id=contentdiv><!-- Article Starts -->
+      <UL class=download>
+        <LI><A 
+        href="http://www.codeproject.com/staticctrl/CBitmapSlider/CBitmapSlider_src.zip">Download 
+        source files - 9 Kb</A> 
+        <LI><A 
+        href="http://www.codeproject.com/staticctrl/CBitmapSlider/CBitmapSlider_demo.zip">Download 
+        demo project -&nbsp;71 Kb</A> 
+        <LI><A 
+        href="http://www.codeproject.com/staticctrl/CBitmapSlider/CBitmapSlider_exe.zip">Download 
+        demo executable - 61 Kb</A> </LI></UL><!-- Article image -->
+      <P><IMG height=308 alt="Sample Image - CBitmapSlider.gif" 
+      src="BitmapSlider_files/CBitmapSlider.gif" width=431></P><!-- Add the rest of your HTML here -->
+      <H2>Introduction</H2>
+      <P>Do you need a slider but default control looks too simple? I hope this 
+      class, <CODE>CBitmapSlider</CODE>, can help you. All you have to do is 
+      read this article and make a few bitmaps. 
+      <H4>Features </H4>
+      <UL>
+        <LI>Transparency effect for both channel and thumb. 
+        <LI>Customize size of the thumb. 
+        <LI>Flicker free. </LI></UL>
+      <P>It uses <A href="http://www.codeproject.com/gdi/flickerfree.asp">CMemDC 
+      from Keith Rule's article</A> to implement double buffering, and uses 
+      functions from <A 
+      href="http://www.codeproject.com/bitmap/transbitmapmask.asp">Raja Segar's 
+      article</A> to display transparent bitmap. 
+      <H2>Using the code</H2>
+      <P>
+      <OL>
+        <LI>Add "<EM>BitmapSlider.h</EM>", "<EM>BitmapSlider.cpp</EM>" and 
+        "<EM>memdc.h</EM>" to your project. 
+        <LI>
+        <P>Insert or import bitmaps to resource of your project. One slider can 
+        have utmost four bitmaps (channel, active channel, thumb, active thumb). 
+        By various combinations of bitmaps, the control can have different 
+        forms. However, there are some restrictions. 
+        <UL>
+          <LI>The bitmap size of channel and active channel must be equal. And 
+          the bitmap size of thumbs and active thumb must also be equal. 
+          <LI>The size of a thumb must be smaller than the size of a channel. 
+          <LI>To use a bitmap for active state, a bitmap for normal state must 
+          exist. </LI></UL>
+        <P></P>
+        <LI>Add control into your dialog resource. 
+        <P>Both "Picture" control and "Static Text" control are available. But 
+        if you have bitmaps for the channel, I recommend "Picture" control. If 
+        you will not use a bitmap for a channel, add "Static Text" control and 
+        make sure to change its size as same size as you want. 
+        <P><IMG height=81 src="BitmapSlider_files/picture.gif" width=92> <IMG 
+        height=81 src="BitmapSlider_files/static.gif" width=85> 
+        <P></P>
+        <LI>Change properties. 
+        <P>Change it's own ID from default value (<CODE>IDC_STATIC</CODE>) to a 
+        new one. If you added "Picture" control, set "Type" as "Bitmap" and 
+        select "Image" as ID of a bitmap that you want to use as channel. 
+        <P><IMG height=188 src="BitmapSlider_files/properties.gif" width=528> 
+        <P>Make sure "Notify" is checked. "Tabstop" is optional. 
+        <P><IMG height=188 src="BitmapSlider_files/notify.gif" width=528> 
+        <P></P>
+        <LI>Add variable for the control. 
+        <P>Add member variable using MFC ClassWizard (Ctrl+W). and change from 
+        "<CODE>CStatic</CODE>" to "<CODE>CBitmapSlider</CODE>" manually. 
+        <P></P>
+        <LI>Insert codes to initialize the control. I recommend 
+        <CODE>OnInitDialog</CODE> for <CODE>CDialog</CODE>, 
+        <CODE>OnInitUpdate</CODE> for <CODE>CFormView</CODE>. There are detailed 
+        documents about methods at "<A 
+        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp#methods">Member 
+        Functions</A>" section. 
+        <H4>Example Code </H4><PRE>BOOL CMyDialog::OnInitDialog()()
+{
+    ...
+
+    m_Slider.SetBitmapChannel( IDB_CHANNEL, NULL, TRUE );
+    m_Slider.SetBitmapThumb( IDB_THUMB, IDB_THUMB_ACTIVE, TRUE );
+    m_Slider.SetRange( -<SPAN class=cpp-literal>30</SPAN>, <SPAN class=cpp-literal>200</SPAN> );
+    m_Slider.SetPos( -<SPAN class=cpp-literal>30</SPAN> );
+    m_Slider.SetMarginLeft( <SPAN class=cpp-literal>8</SPAN> );
+    m_Slider.SetMarginRight( <SPAN class=cpp-literal>8</SPAN> );
+
+    ...
+}
+</PRE>
+        <P></P>
+        <LI>Implement message handler. 
+        <P>Insert these lines to implement message handler. 
+        <P>
+        <UL>
+          <LI>In the header file. <PRE>afx_msg LRESULT OnMyMessage(WPARAM wParam, LPARAM lParam);</PRE>
+          <LI>In the message map. <PRE>ON_MESSAGE(WM_BITMAPSLIDER_MOVING, OnMyMessage)</PRE>
+          <LI>In the source code. <PRE>LRESULT CMyDlg::OnMyMessage(WPARAM wParam, LPARAM lParam) {
+...
+}</PRE></LI></UL>
+        <P>"<A 
+        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp#messages">Notification 
+        Messages</A>" section explains about messages. </P></LI></OL>
+      <H2><A name=methods>Member Functions</H2></A>
+      <UL>
+        <LI><CODE>SetBitmapChannel </CODE>- Load bitmaps for a channel <PRE>BOOL SetBitmapChannel(
+    UINT nChannelID,
+    UINT nActiveID = NULL,
+    BOOL bTransparent = FALSE,
+    COLORREF clrpTransColor = <SPAN class=cpp-literal>0xFF000000</SPAN>,
+    <SPAN class=cpp-keyword>int</SPAN> iTransPixelX = <SPAN class=cpp-literal>0</SPAN>,
+    <SPAN class=cpp-keyword>int</SPAN> iTransPixelY = <SPAN class=cpp-literal>0</SPAN>
+);
+</PRE><B>Parameters</B> 
+        <UL>
+          <LI><CODE>nChannelID </CODE>- ID number of the bitmap resource of the 
+          channel. 
+          <LI><CODE>nActiveID </CODE>- ID number of the bitmap resource of the 
+          active channel. 
+          <LI><CODE>bTransparent </CODE>- <CODE>TRUE </CODE>to apply 
+          transparency effect. 
+          <LI><CODE>clrpTransColor </CODE>- RGB color to treat as transparent. 
+          <LI><CODE>iTransPixelX </CODE>- Logical x-coordinate of a point. It's 
+          color will be treated as transparent. 
+          <LI><CODE>iTransPixelY </CODE>- Logical y-coordinate of a point. 
+        </LI></UL>
+        <P><B>Returns&nbsp; </B><CODE>TRUE </CODE>if function succeeds; 
+        otherwise <CODE>FALSE</CODE>. 
+        <P></P>
+        <LI><CODE>SetBitmapThumb </CODE>- Load bitmaps for a thumb <PRE>BOOL SetBitmapThumb(
+    UINT nThumbID,
+    UINT nActiveID = NULL,
+    BOOL bTransparent = FALSE,
+    COLORREF clrpTransColor = <SPAN class=cpp-literal>0xFF000000</SPAN>,
+    <SPAN class=cpp-keyword>int</SPAN> iTransPixelX = <SPAN class=cpp-literal>0</SPAN>,
+    <SPAN class=cpp-keyword>int</SPAN> iTransPixelY = <SPAN class=cpp-literal>0</SPAN>
+);
+</PRE><B>Parameters</B> 
+        <UL>
+          <LI><CODE>nThumbID </CODE>- ID of bitmap resource. 
+          <LI><CODE>nActiveID </CODE>- ID of bitmap resource. 
+          <LI><CODE>bTransparent </CODE>- TRUE to apply transparency effect. 
+          <LI><CODE>clrpTransColor </CODE>- RGB color to treat as transparent. 
+          <LI><CODE>iTransPixelX </CODE>- Logical x-coordinate of a point. It's 
+          color will be treated as transparent. 
+          <LI><CODE>iTransPixelY </CODE>- Logical y-coordinate of a point. 
+        </LI></UL>
+        <P><B>Returns</B>: <CODE>TRUE </CODE>if function succeeds; otherwise 
+        <CODE>FALSE</CODE>. 
+        <P></P>
+        <LI><CODE>SetRange </CODE>- Sets the range (minimum and maximum 
+        positions) for the slider. <PRE>BOOL SetRange(
+    <SPAN class=cpp-keyword>int</SPAN> nMin,
+    <SPAN class=cpp-keyword>int</SPAN> nMax,
+    BOOL bRedraw = FALSE
+);
+</PRE><B>Parameters</B>: 
+        <UL>
+          <LI><CODE>nMin </CODE>- Minimum position for the slider. 
+          <LI><CODE>nMax </CODE>- Maximum position for the slider. 
+          <LI><CODE>bRedraw </CODE>- <CODE>TRUE </CODE>to redraw after the range 
+          is set. <CODE>FALSE </CODE>to only change the range. 
+          <P></P></LI></UL>
+        <P></P>
+        <LI><CODE>SetVertical </CODE>- Sets slider to vertical or horizontal. <PRE><SPAN class=cpp-keyword>void</SPAN> SetVertical(
+    BOOL bVertical = TRUE
+);
+</PRE><B>Parameters</B>: 
+        <UL>
+          <LI><CODE>bVertical </CODE>- <CODE>TRUE </CODE>to set vertical. 
+          <CODE>FALSE </CODE>to set horizontal. </LI></UL>
+        <P></P>
+        <LI><CODE>SetMargin </CODE>- Sets the margins for a control. <PRE><SPAN class=cpp-keyword>void</SPAN> SetPos(
+    <SPAN class=cpp-keyword>int</SPAN> nLeft,
+    <SPAN class=cpp-keyword>int</SPAN> nTop,
+    <SPAN class=cpp-keyword>int</SPAN> nRight,
+    <SPAN class=cpp-keyword>int</SPAN> nBottom
+);
+</PRE><B>Parameters</B>: 
+        <UL>
+          <LI><CODE>nLeft </CODE>- Specifies the width of the new left margin, 
+          in pixels. 
+          <LI><CODE>nTop </CODE>- Specifies the height of the new top margin, in 
+          pixels. 
+          <LI><CODE>nRight </CODE>- Specifies the width of the new right margin, 
+          in pixels. 
+          <LI><CODE>nBottom </CODE>- Specifies the height of the new bottom 
+          margin, in pixels. </LI></UL>
+        <P></P>
+        <LI><CODE>SetPos </CODE>- Sets the current position of the slider. <PRE><SPAN class=cpp-keyword>void</SPAN> SetPos(
+    <SPAN class=cpp-keyword>int</SPAN> nPos
+);
+</PRE><B>Parameters</B>: 
+        <UL>
+          <LI><CODE>nPos </CODE>- Specifies the new slider position. </LI></UL>
+        <P></P>
+        <LI><CODE>SetPageSize </CODE>- Sets the size of the page for a control. <PRE><SPAN class=cpp-keyword>void</SPAN> SetPageSize(
+    <SPAN class=cpp-keyword>int</SPAN> nSize
+);
+</PRE><B>Parameters</B>: 
+        <UL>
+          <LI><CODE>nSize </CODE>- The new page size of the control. </LI></UL>
+        <P><B>Return Value</B>: The previous page size. 
+        <P></P>
+        <LI><CODE>GetRange </CODE>- Retrieves the maximum and minimum positions 
+        for the slider. <PRE><SPAN class=cpp-keyword>void</SPAN> GetRange(
+    <SPAN class=cpp-keyword>int</SPAN>&amp; nMin,
+    <SPAN class=cpp-keyword>int</SPAN>&amp; nMax
+);
+</PRE><B>Parameters</B>: 
+        <UL>
+          <LI><CODE>nMin </CODE>- Reference to an integer that receives the 
+          minimum position. 
+          <LI><CODE>nMax </CODE>- Reference to an integer that receives the 
+          maximum position. 
+          <P></P></LI></UL>
+        <P></P>
+        <LI><CODE>GetPos </CODE>- Retrieves the current position of the slider. <PRE><SPAN class=cpp-keyword>int</SPAN> GetPos();
+</PRE><B>Return Value: </B>The current position. 
+        <P></P>
+        <LI><CODE>Enable </CODE>- Enables or disables control. <PRE><SPAN class=cpp-keyword>void</SPAN> Enable( BOOL bEnable );
+</PRE><B>Parameter</B>: 
+        <UL>
+          <LI><CODE>bEnable </CODE>- <CODE>TRUE </CODE>to enable control. 
+          <CODE>FALSE </CODE>to disable control. 
+          <P></P></LI></UL>
+        <P></P>
+        <LI><CODE>DrawFocusRect </CODE>- Specify whether draw focus rectangle or 
+        not. <PRE>DrawFocusRect(BOOL bDraw, BOOL bRedraw);</PRE><B>Parameter</B>: 
+        <UL>
+          <LI><CODE>bDraw </CODE>- <CODE>TRUE</CODE> to draw focus rectangle. 
+          <CODE>FALSE</CODE> to hide focus rectangle. 
+          <LI><CODE>bRedraw </CODE>- <CODE>TRUE</CODE> to redraw status is 
+          changed. <CODE>FALSE</CODE> to only change the status. 
+          <P></P></LI></UL></LI></UL>
+      <H2><A name=messages>Notification Messages</H2></A>
+      <UL>
+        <LI><CODE>WM_BITMAPSLIDER_MOVING </CODE>- While slider is being dragged. 
+<PRE>WM_BITMAPSLIDER_MOVING
+
+    WPARAM wParam
+    LPARAM lParam;
+</PRE><B>Parameters</B>: 
+        <UL>
+          <LI><CODE>wParam </CODE>- Control's ID. 
+          <LI><CODE>lParam </CODE>- The current position. 
+          <P></P></LI></UL>
+        <P></P>
+        <LI><CODE>WM_BITMAPSLIDER_MOVED </CODE>- When dragging is finished. <PRE>WM_BITMAPSLIDER_MOVING
+
+    WPARAM wParam
+    LPARAM lParam;
+</PRE><B>Parameters</B>: 
+        <UL>
+          <LI><CODE>wParam </CODE>- Control's ID. 
+          <LI><CODE>lParam </CODE>- The current position. 
+          <P></P></LI></UL></LI></UL>
+      <H2>Todo</H2>
+      <P>
+      <UL>
+        <LI>Support changing size of control. </LI></UL>
+      <H2>History</H2>
+      <P>
+      <UL>
+        <LI>v1.5 (16/September/2003) 
+        <UL>
+          <LI>Keyboard support. 
+          <LI>Fixed a few bugs. </LI></UL>
+        <LI>v1.0 (28/August/2003) 
+        <UL>
+          <LI>Double buffring. 
+          <LI>Transparency effect is added. 
+          <LI>Support vertical option.</LI></UL>
+        <LI>v0.7 (15/May/2003) 
+        <UL>
+          <LI>First release.</LI></UL></LI></UL>
+      <H2>Thanks To</H2>
+      <UL>
+        <LI><A 
+        href="http://www.codeproject.com/script/profile/whos_who.asp?id=6462">Holger 
+        Persch</A> - Both suggested and taught to implement keyboard support. 
+        <LI><A 
+        href="http://www.codeproject.com/script/profile/whos_who.asp?id=178563">Nicolas 
+        Bonamy</A> - Advised to implement OnDestroy to detach bitmap. </LI></UL><!-- Article Ends --></DIV>
+      <H2>About Junho Ryu</H2>
+      <TABLE width="100%" border=0>
+        <TBODY>
+        <TR vAlign=top>
+          <TD class=smallText noWrap><IMG 
+            src="BitmapSlider_files/{8A586FB1-45A9-4199-BE96-933F330BFAC8}.gif"><BR></TD>
+          <TD class=smallText width="100%">
+            <UL><BR>
+              <LI>Working in <A 
+href="http://www.neowiz.com/eng/">Neowiz</A>.<BR>
+              <LI>A student of <A 
+              href="http://www.postech.ac.kr/e/">POSTECH</A>.(temporary out)<BR>
+              <LI>5th place, both 26th and 27th ACM ICPC Asia Regional - 
+              Taejon<BR></LI></UL>
+            <P class=smallText>Click <A 
+            href="http://www.codeproject.com/script/profile/whos_who.asp?vt=arts&amp;id=213071">here</A> 
+            to view Junho Ryu's online profile.</P></TD></TR></TBODY></TABLE><BR>
+      <TABLE cellPadding=4 width="100%" border=0>
+        <TBODY>
+        <TR vAlign=top>
+          <TD width="100%">
+            <H2>Other popular articles:</H2>
+            <UL>
+              <LI><A 
+              href="http://www.codeproject.com/staticctrl/digistring.asp">Static 
+              LED control - CDigiStatic 1.3</A><BR><SPAN class=smalltext>A 
+              control to display text or numbers with a 14 or 7 segment 
+              display.</SPAN>
+              <LI><A 
+              href="http://www.codeproject.com/staticctrl/digidisplay.asp">Digital 
+              Display CStatic control</A><BR><SPAN class=smalltext>An article on 
+              the Digital Display Control</SPAN>
+              <LI><A href="http://www.codeproject.com/staticctrl/ticker.asp">A 
+              Ticker control</A><BR><SPAN class=smalltext>A class that provides 
+              a news/stock ticker for your MFC applications</SPAN>
+              <LI><A 
+              href="http://www.codeproject.com/staticctrl/hyperlinkscroller.asp">Hyperlink 
+              Scroller</A><BR><SPAN class=smalltext>An article on scrolling your 
+              hyperlinks, something like a news ticker</SPAN></LI></UL></TD>
+          <TD width=360>
+            <SCRIPT language=javascript>document.write("<IFRAME src=\"/script/admentor/include/ServeAdHTML.aspx?C=False&id=786\" border=0 frameborder=0 scrolling=no width=300 height=250></IFRAME>");</SCRIPT>
+          </TD></TR></TBODY></TABLE>
+      <FORM action=/script/rating/code/app/insert_vote.asp method=post><INPUT 
+      type=hidden value=CBitmapSlider/staticctrl8/27/2003 name=vote_name> <INPUT 
+      type=hidden value=/staticctrl/CBitmapSlider.asp name=goal> 
+      <TABLE cellSpacing=0 cellPadding=1 width="100%" bgColor=#ff9900 
+        border=0><TBODY>
+        <TR>
+          <TD width="100%">
+            <TABLE cellSpacing=0 cellPadding=4 width="100%" bgColor=#fbedbb 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD class=smalltext vAlign=center>[<A 
+                  href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp#__top">Top</A>]</TD>
+                <TD vAlign=center noWrap align=right><I><B>Rate this Article 
+                  for us!</B></I>&nbsp;&nbsp;&nbsp;&nbsp; <I>Poor</I><INPUT 
+                  type=radio value=1 name=rate><INPUT type=radio value=2 
+                  name=rate><INPUT type=radio value=3 name=rate><INPUT 
+                  type=radio value=4 name=rate><INPUT type=radio value=5 
+                  name=rate><I>Excellent</I>&nbsp;&nbsp;<INPUT class=FormButton type=submit value=Vote> 
+                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FORM>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR vAlign=top>
+          <TD vAlign=top>
+            <CENTER>
+            <SCRIPT language=javascript>document.write("<a href=\"/script/admentor/admentorredir.asp?id=1217&way=ban\" target=_blank><img src=\"/script/admentor/include/ServeAd.aspx?File=%2Fscript%2Fadmentor%2Fimages%2Fmainsoft%5F120x60%5Fgrasshopper%2Egif&C=False&id=1217\" alt=\"\" border=0 width=120 height=60></a>");</SCRIPT>
+            <BR><FONT size=1><A 
+            href="http://www.codeproject.com/info/MediaKit/">Premium 
+            Sponsor</A></FONT></CENTER><BR></TD>
+          <TD vAlign=top noWrap align=middle><SPAN id=AdBanner5>
+            <SCRIPT language=javascript>document.write("<a href=\"/script/admentor/admentorredir.asp?id=1094&way=ban\" target=_blank><img src=\"/script/admentor/include/ServeAd.aspx?File=%2Fscript%2Fadmentor%2Fimages%2FWholeTomato%5FAutoSuggest%2Egif&C=False&id=1094\" alt=\"The intellisense upgrade for Visual Studio .NET - make your IDE as smart as you.\" border=0 width=468 height=60></a>");</SCRIPT>
+            </SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><A 
+name=__comments></A>
+<SCRIPT language=JavaScript>
+
+function MsgCategoryForm(UserID, MsgID, MsgType)
+{
+	document.write("Rate this message: ");
+	document.write("<a href='#xx" + MsgID.toString() + "xx' onclick='CatMsg(" + UserID.toString() + ", " + MsgID.toString() + ", " + MsgVoteGood.toString() + ")'>Good " + MsgType + "</a> ");
+	document.write("<a href='#xx" + MsgID.toString() + "xx' onclick='CatMsg(" + UserID.toString() + ", " + MsgID.toString() + ", " + MsgVoteBad.toString() + ")'>Bad " + MsgType + "</a> ");
+	document.write("<a href='#xx" + MsgID.toString() + "xx' onclick='CatMsg(" + UserID.toString() + ", " + MsgID.toString() + ", " + MsgVoteWrong.toString() + ")'>Innapropriate / Offtopic</a> ");
+	document.write("<a href='#xx" + MsgID.toString() + "xx' onclick='CatMsg(" + UserID.toString() + ", " + MsgID.toString() + ", " + MsgVoteOffensive.toString() + ")'>Offensive</a> ");
+}
+function CatMsg(userid, msgid, Category) 
+{ 
+	open("/script/comments/vote.asp?js=1&user="+userid.toString()+"&msg="+msgid.toString()+"&score="+Category.toString() ,"helpful","toolbar=no,resizable=yes,scrollbars=yes,directories=no,menubar=no,width=300,height=200");
+	return false;
+}
+
+function MsgVoteForm(UserID, MsgID)
+{
+	document.write("Score this message: ");
+	for (var i=1; i<=5;i++)
+		document.write("<a href='#xx" + MsgID.toString() + "xx' title='give this message a vote of " + i.toString() + "' onclick='RateMsg(" + UserID.toString() + ", " + MsgID.toString() + ", " + i.toString() + ")'><b>" + i.toString() + "</b></a> ");
+	document.write(" (out of 5)");
+}
+
+function RateMsg(userid, msgid, score) 
+{ 
+	open("/script/comments/vote.asp?js=1&user="+userid.toString()+"&msg="+msgid.toString()+"&score="+score.toString() ,"helpful","toolbar=no,resizable=yes,scrollbars=yes,directories=no,menubar=no,width=300,height=200");
+	return false;
+}
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+
+var Selected = "";
+var AdTime = new Date();
+
+function SwitchMessage(elm)
+{
+	
+	var elmref;
+	if (Selected != "")
+	{
+		elmref = eval("document.getElementById('" + Selected + "_h1')");
+		if (elmref) elmref.style.display = 'none';
+		elmref = eval("document.getElementById('" + Selected + "_h0')");
+		if (elmref) elmref.bgColor = '#FEF9E7';
+	}
+	if (Selected != elm.name) 
+	{
+		Selected = elm.name;
+		elmref = eval("document.getElementById('" + Selected + "_h1')");
+		if (elmref) 
+		{
+			if (elmref.style.display=='none') elmref.style.display='';
+			else elmref.style.display = 'none';
+		}
+		elmref = eval("document.getElementById('" + Selected + "_h0')");
+		if (elmref) 
+			elmref.bgColor = '#99CCFF';
+	}
+	else
+		Selected="";
+		
+	window.location = "#xx" + Selected + "xx";
+
+	return false;
+}
+
+</SCRIPT>
+
+<SCRIPT language=javascript event=onclick for=DynMessLink>
+return SwitchMessage(this);
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#ff9900 border=0>
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      <TABLE id=ForumTable cellSpacing=1 cellPadding=0 width="100%" 
+      bgColor=#ff9900 border=0>
+        <FORM 
+        action=/script/comments/app/do_filtermessages.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628 
+        method=post>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE cellSpacing=0 cellPadding=3 width="100%" bgColor=white 
+            border=0>
+              <TBODY>
+              <TR bgColor=#fbedbb>
+                <TD class=smalltext noWrap><A 
+                  href="http://www.codeproject.com/script/comments/faq.asp"><IMG 
+                  height=16 src="BitmapSlider_files/forum_faq.gif" width=16 
+                  align=absMiddle border=0> <B>FAQ</B></A>&nbsp;</TD>
+                <TD class=smalltext vAlign=top noWrap align=right>Noise 
+                  tolerance <SELECT class=smalltext size=1 name=noise><OPTION 
+                    value=1>Very High</OPTION> <OPTION value=2>High</OPTION> 
+                    <OPTION value=3 selected>Medium</OPTION> <OPTION 
+                    value=4>Low</OPTION> <OPTION value=5>Very 
+                  low</OPTION></SELECT>&nbsp;&nbsp;</TD>
+                <TD class=smalltext vAlign=center noWrap align=right 
+                  colSpan=2><A 
+                  href="http://www.codeproject.com/script/comments/search_comments.asp?forumid=16628"><IMG 
+                  height=15 src="BitmapSlider_files/forum_search.gif" width=16 
+                  border=0> Search comments</A> &nbsp;</TD>
+                <TD vAlign=top align=right><INPUT class=FormButton type=submit value="Set Options" name=submit></TD></TR>
+              <TR bgColor=#ff9900>
+                <TD width="100%">&nbsp;</TD>
+                <TD class=smalltext vAlign=top noWrap align=right>View <SELECT 
+                  class=smalltext size=1 name=expand><OPTION value=0>Normal 
+                    (slow)</OPTION> <OPTION value=2>Preview (slow)</OPTION> 
+                    <OPTION value=5 selected>Message View</OPTION> <OPTION 
+                    value=6>Topic View</OPTION> <OPTION value=1>Thread 
+                    View</OPTION> <OPTION value=3>Expanded (Supporters 
+                    only)</OPTION></SELECT>&nbsp;&nbsp;</TD>
+                <TD class=smalltext vAlign=top noWrap>Per page <SELECT 
+                  class=smalltext size=1 name=perpage><OPTION 
+                    value=10>10</OPTION> <OPTION value=25 selected>25</OPTION> 
+                    <OPTION value=50>50</OPTION></SELECT></TD>
+                <TD colSpan=2>&nbsp;</TD></TR></TBODY></TABLE></TD></TR></FORM>
+        <TR bgColor=#fbedbb>
+          <TD><A name=xx0xx></A>
+            <TABLE cellPadding=2 width="100%" bgColor=#fbedbb border=0>
+              <TBODY>
+              <TR>
+                <TD class=messagetitle><IMG height=16 
+                  src="BitmapSlider_files/forum_newmsg.gif" width=16 align=top 
+                  border=0><A class=HoverLink 
+                  title="Add a new message to the discussions" 
+                  href="http://www.codeproject.com/script/comments/user_new.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628" 
+                  target=_top name=HoverNL><B>New Message</B></A></TD>
+                <TD class=messagetitle>Msgs 1 to 25 of 46 (Total: 46) (<A 
+                  href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628">Refresh</A>)</TD>
+                <TD noWrap align=right><FONT class=messagetitle><SPAN 
+                  class=HoverLink>First</SPAN> <SPAN class=HoverLink>Prev</SPAN> 
+                  <A class=HoverLink 
+                  href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;fr=26" 
+                  name=HoverNL>Next</A> <SPAN 
+                  class=HoverLink>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN> 
+              </FONT></TD></TR></TBODY></TABLE></TD></TR>
+        <TR bgColor=white>
+          <TD>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=2 bgColor=#fbedbb border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=messagetitle width="100%">Subject&nbsp;</TD>
+                      <TD class=messagetitle noWrap width=140>Author&nbsp;</TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT 
+                    class=messagetitle>Date&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=1187381_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx1187381xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=1187381#xx1187381xx" 
+                        name=1187381><B>Sizing issue.</B></A></TD>
+                      <TD vAlign=bottom><IMG height=13 
+                        alt="Unconfirmed/Anonymous posting" 
+                        src="BitmapSlider_files/usersuss.gif" 
+                      width=15></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>extrealm</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>13:27 7 Aug 
+                        '05</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=1187381_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT 
+                                class=messagecontent>Scrolling range doesn't 
+                                affected after SetWindowPos() with new 
+                                size.<BR>User can add WM_SIZE handler, which 
+                                change both m_nWidth, m_nHeight 
+                                parameter.<BR><BR><BR><BR>/E/X/T/R/E/A/L/M - In 
+                                to the 
+                                rain...<BR>extrelam@perstel.co.kr.NOSPAM.COM<BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1187381">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1187381">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=1187381&amp;forumid=16628&amp;select=1187381#xx1187381xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=1187381#xx1187381xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1187381"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1187381"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(0,1187381);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=955381_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx955381xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=955381#xx955381xx" 
+                        name=955381><B>&amp;#44048;&amp;#49324;&amp;#50836;</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=1454915"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>jckkorea</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>10:08 23 Oct 
+                        '04</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=955381_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>&#51204; 
+                                &#54620;&#44397;&#49324;&#46988;&#51064;&#45936; &#54620;&#44397;&#49324;&#46988;&#51060; &#50808;&#44397;&#50640; &#45208;&#44032;&#49436; &#50948;&#45824;&#54620; &#50629;&#51201;&#51012; &#45224;&#44592;&#45716;&#44163;&#51060; &#51088;&#46993;&#49828;&#47101;&#49845;&#45768;&#45796;<BR>&#51200;&#45716; 
+                                &#44172;&#51076;&#44277;&#54617;&#46020;&#51064;&#45936;&#50836; &#51339;&#51008;&#51088;&#47308; 
+                                &#44048;&#49324;&#54633;&#45768;&#45796;.<BR><BR><BR>dd<BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=955381">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=955381">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=955381&amp;forumid=16628&amp;select=955381#xx955381xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=955381#xx955381xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=955381"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=955381"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(1454915,955381);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=918346_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx918346xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=918346#xx918346xx" 
+                        name=918346><B>CBitmapSlider for PocketPC</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=1335543"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>codehar</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>11:01 7 Sep 
+                        '04</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=918346_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Hi 
+                                Joon,<BR>Nice App.<BR>how to port this to 
+                                PocketPC.<BR>Some of the API functions usedare 
+                                not supported in 
+                                PPC.<BR>Thx<BR><BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=918346">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=918346">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=918346&amp;forumid=16628&amp;select=918346#xx918346xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=918346#xx918346xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=918346"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=918346"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(1335543,918346);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=989798_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx989798xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=18><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=989798#xx989798xx" 
+                        name=989798>Re: CBitmapSlider for PocketPC</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=115260"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle>jschisler&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>13:40 7 Dec 
+                        '04&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=989798_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=18><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>I just 
+                                commented out the lines in CMemDC that aren't 
+                                supported on Pocket PC and it compiled. I had to 
+                                adjust the thumb a bit in the code, but other 
+                                than that (and a few graphic anomolies), it 
+                                seems to work fine. <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=989798">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=989798">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=918346&amp;forumid=16628&amp;select=989798#xx989798xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=989798#xx989798xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=989798"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=989798"><I>Delete</I></A>]<BR>Score: 
+                                2.0 (1 vote).
+                                <SCRIPT language=Javascript>MsgVoteForm(115260,989798);</SCRIPT>
+                                 
+                    </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=891879_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx891879xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=891879#xx891879xx" 
+                        name=891879><B>Great stuff, but I have a 
+                      problem</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=1202183"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>martintiger</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>13:33 6 Aug 
+                        '04</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=891879_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Hi, I 
+                                really like your custom control, that's for 
+                                shure!<BR><BR>I'm very new to MFC. Lately I try 
+                                to implement custom controls in a MFC based 
+                                environment (kX audio driver 
+                                [url]www.kxproject.com[/url]) and I've had 
+                                success with most controls. The author of kX 
+                                Project has created custom classes to substitute 
+                                almost all MFC classes and tryes to reduce MFC 
+                                as much as possible (and totaly get rid of in 
+                                the end). <BR><BR>I tried to implement your 
+                                control manually (without ClassWizard) with 
+                                obj.Create and subseqent member functions. All 
+                                compiles well, but in the application dialog I 
+                                don't see the bitmaps, only the dimensions of 
+                                the control. I think I've done everything right, 
+                                but since I'm new to MFC I can't solve the 
+                                problem myself.<BR><BR>Please give me some hints 
+                                on solving this 
+                                problem.<BR><BR>Thanks<BR><BR>|Martin| 
+                                <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=891879">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=891879">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=891879&amp;forumid=16628&amp;select=891879#xx891879xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=891879#xx891879xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=891879"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=891879"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(1202183,891879);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=828078_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx828078xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=828078#xx828078xx" 
+                        name=828078><B>Nice Work</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=592209"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>beash</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>10:13 20 May 
+                        '04</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=828078_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Great 
+                                job, excellent documentation. Thanks. 
+                                <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=828078">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=828078">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=828078&amp;forumid=16628&amp;select=828078#xx828078xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=828078#xx828078xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=828078"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=828078"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(592209,828078);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=746744_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx746744xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=746744#xx746744xx" 
+                        name=746744><B>Awesome, but one suggestion</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=68529"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle><B>Greg 
+                        Ellis</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>10:58 23 Feb 
+                        '04</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=746744_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>I think 
+                                it would be cool if you could have rollovers for 
+                                the slider control. So when the mouse moves over 
+                                the slider control, the whole slider could light 
+                                up until the mouse leaves.<BR><BR>Great job, you 
+                                got my 5. <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=746744">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=746744">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=746744&amp;forumid=16628&amp;select=746744#xx746744xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=746744#xx746744xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=746744"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=746744"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(68529,746744);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=711775_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx711775xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=711775#xx711775xx" 
+                        name=711775><B>Any chance of making it an ActiveX 
+                        Control?</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=796695"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>bigolslabomeat</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>23:27 12 Jan 
+                        '04</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=711775_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Hey 
+                                there,<BR><BR>First like to say that this is an 
+                                amazing control that is PERFECT for my app. Only 
+                                thing is I know nothing about C++ (the syntax 
+                                brings me out in a sweat!) but want to use it in 
+                                my VB.Net app.<BR><BR>Is there any way of having 
+                                this as an activex (or other) control that can 
+                                be added to all apps? This would make it THE 
+                                ultimate slider out there!<BR><BR>Unless of 
+                                course I'm just being stupid and you can add it 
+                                to a VB app easily (very possible, I'm still 
+                                pretty much a beginner)<BR><BR>Anyways, thanks 
+                                for a great control that I wish I could 
+                                use!<BR><BR>Richard <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=711775">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=711775">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=711775&amp;forumid=16628&amp;select=711775#xx711775xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=711775#xx711775xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=711775"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=711775"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(796695,711775);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=693388_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx693388xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=693388#xx693388xx" 
+                        name=693388><B>Excellent creativity,</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=21074"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>Balkrishna 
+                      Talele</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>7:11 17 Dec 
+                        '03</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=693388_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT 
+                                class=messagecontent>Excellent creativity, no 
+                                more more for the above code!!! three cheers 
+                                <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=693388">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=693388">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=693388&amp;forumid=16628&amp;select=693388#xx693388xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=693388#xx693388xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=693388"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=693388"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(21074,693388);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=701381_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx701381xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=18><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=701381#xx701381xx" 
+                        name=701381>Re: Excellent creativity,</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=213071"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Joon-ho 
+                        Ryu&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>23:57 29 Dec 
+                        '03&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=701381_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=18><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Oh, 
+                                Thank you. But it's too much!<BR>I hope to 
+                                improve it with better knowledge when I have 
+                                more time.<BR>And it's based on other great 
+                                articles and advices.<BR>They have priority to 
+                                be praised over it. <IMG 
+                                src="BitmapSlider_files/smiley_smile.gif" 
+                                align=absMiddle><BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=701381">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=701381">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=693388&amp;forumid=16628&amp;select=701381#xx701381xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=701381#xx701381xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=701381"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=701381"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(213071,701381);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=656836_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx656836xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=656836#xx656836xx" 
+                        name=656836><B>How to use in C#</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=550620"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>Bluetears</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>6:37 4 Nov 
+                        '03</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=656836_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>This is 
+                                a wonderful control. I have never seen anything 
+                                like it.<BR>But how can i use it in C#?<BR>Thx 
+                                in advance <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=656836">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=656836">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=656836&amp;forumid=16628&amp;select=656836#xx656836xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=656836#xx656836xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=656836"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=656836"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(550620,656836);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=659467_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx659467xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=18><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=659467#xx659467xx" 
+                        name=659467>Re: How to use in C#</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=213071"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Joon-ho 
+                        Ryu&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>0:13 7 Nov 
+                        '03&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=659467_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=18><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Thank 
+                                you.<BR>But, I've never used C# yet.<BR>I am 
+                                sorry that I can't help you now. <IMG 
+                                src="BitmapSlider_files/smiley_cry.gif" 
+                                align=absMiddle><BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=659467">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=659467">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=656836&amp;forumid=16628&amp;select=659467#xx659467xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=659467#xx659467xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=659467"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=659467"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(213071,659467);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=654746_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx654746xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=654746#xx654746xx" 
+                        name=654746><B>Problem with transparent 
+Slider</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=119553"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle><B>Olaf 
+                        Gramkow</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>17:11 1 Nov 
+                        '03</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=654746_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>When I 
+                                start the demo and another program (for example 
+                                the explorer) is in front of the demo program 
+                                (the demo program will be displayed behind the 
+                                other program), the slider with the bus and the 
+                                bird have a wrong background. The background 
+                                behind the images (bird, bus) has the backgroud 
+                                of the window, which was in the front of the 
+                                demo program, when I startet the demo program. 
+                                Any ideas how to fix this 
+                                problem?<BR><BR>Olaf<BR><BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=654746">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=654746">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=654746&amp;forumid=16628&amp;select=654746#xx654746xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=654746#xx654746xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=654746"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=654746"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(119553,654746);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=656826_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx656826xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=18><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=656826#xx656826xx" 
+                        name=656826>Re: Problem with transparent Slider</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=213071"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Joon-ho 
+                        Ryu&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>6:20 4 Nov 
+                        '03&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=656826_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=18><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Oh, I 
+                                see...<BR>I tought that even the control don't 
+                                erase it's background, a dialog window will do 
+                                for it.<BR>CBitmapSlider::OnEraseBkgnd(CDC* pDC) 
+                                may has a problem.<BR><BR>By the way, how to 
+                                start the program behind other 
+                                application?<BR>Would you please tell me how you 
+                                did it?<BR>I want to test and debug it but I 
+                                can't.<BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=656826">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=656826">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=654746&amp;forumid=16628&amp;select=656826#xx656826xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=656826#xx656826xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=656826"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=656826"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(213071,656826);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=657293_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx657293xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=36><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=657293#xx657293xx" 
+                        name=657293>Re: Problem with transparent Slider</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=119553"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Olaf 
+                        Gramkow&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>15:10 4 Nov 
+                        '03&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=657293_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=36><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>That's 
+                                no problem.<BR><BR>Start the Windows 
+                                Task-Manager and place the window in the middle 
+                                of the Desktop. Now start your demo program, it 
+                                will appear behind the Task-Manager. Then close 
+                                the Task-Manager and you will see the 
+                                problem.<BR><BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=657293">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=657293">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=654746&amp;forumid=16628&amp;select=657293#xx657293xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=657293#xx657293xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=657293"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=657293"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(119553,657293);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=659464_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx659464xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=54><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=659464#xx659464xx" 
+                        name=659464>Re: Problem with transparent Slider</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=213071"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Joon-ho 
+                        Ryu&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>23:57 6 Nov 
+                        '03&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=659464_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=54><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Oh, 
+                                there is a 
+                                problem.<BR>CBitmapSlider::CopyBackground 
+                                function copies background before it is 
+                                erased.<BR>I am sorry, but I don't know how to 
+                                solve this problem yet. <IMG 
+                                src="BitmapSlider_files/smiley_frown.gif" 
+                                align=absMiddle><BR>I'll update it immediately 
+                                when I know it.<BR>Thank you very much! 
+                                <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=659464">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=659464">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=654746&amp;forumid=16628&amp;select=659464#xx659464xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=659464#xx659464xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=659464"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=659464"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(213071,659464);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=1002239_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx1002239xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=72><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=1002239#xx1002239xx" 
+                        name=1002239>Re: Problem with transparent Slider</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=68529"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Greg 
+                        Ellis&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>15:50 23 Dec 
+                        '04&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=1002239_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=72><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Did 
+                                anyone figure out how to fix this 
+                                yet?<BR><BR>Cheers,<BR>Greg 
+                                <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1002239">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1002239">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=654746&amp;forumid=16628&amp;select=1002239#xx1002239xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=1002239#xx1002239xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1002239"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1002239"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(68529,1002239);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=1187298_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx1187298xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=72><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=1187298#xx1187298xx" 
+                        name=1187298>Re: Problem with transparent Slider</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=472627"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle>extrealm&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>9:57 7 Aug 
+                        '05&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=1187298_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=72><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Is it 
+                                necessary setting up channel bitmap?<BR>This is 
+                                critical in real application with splash window 
+                                which overlaps slider.<BR>Well I should set the 
+                                background bitmap until the bug 
+                                fixed.<BR><BR>/E/X/T/R/E/A/L/M - In to the 
+                                rain...<BR>extrelam@perstel.co.kr.NOSPAM.COM<BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1187298">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1187298">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=654746&amp;forumid=16628&amp;select=1187298#xx1187298xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=1187298#xx1187298xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1187298"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1187298"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(472627,1187298);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=615911_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx615911xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=615911#xx615911xx" 
+                        name=615911><B>Crashes in debug mode.</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=4650"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>WREY</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>0:51 21 Sep 
+                        '03</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=615911_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Works 
+                                in Release mode.<BR><BR>The balloon slider keeps 
+                                outputting a message window that the user has to 
+                                keep responding to, which makes using the 
+                                keyboard with it, a hassle.<BR><BR><IMG 
+                                src="BitmapSlider_files/smiley_cry.gif" 
+                                align=absMiddle> <BR><BR>William<BR><BR>Fortes 
+                                in fide et opere!<BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=615911">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=615911">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=615911&amp;forumid=16628&amp;select=615911#xx615911xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=615911#xx615911xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=615911"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=615911"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(4650,615911);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=616375_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx616375xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=18><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=616375#xx616375xx" 
+                        name=616375>Re: Crashes in debug mode.</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=213071"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Joon-ho 
+                        Ryu&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>20:20 21 Sep 
+                        '03&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=616375_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=18><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent><IMG 
+                                src="BitmapSlider_files/smiley_OMG.gif" 
+                                align=absMiddle><BR>I tried the demo project 
+                                with my PC in debug mode again, but I can't find 
+                                any abnormal behavior. I'm sorry about that I 
+                                can't find both the problem and its reason by my 
+                                self. I need your help to debug it.<BR><BR>Maybe 
+                                there is other message using as same number as 
+                                WM_BITMAPSLIDER_MOVED.<BR>Would you try to 
+                                change its value from 0x0400 to 
+                                0xBFFF?<BR><BR>line #21 of BitmapSlider.h<BR><PRE>#define WM_BITMAPSLIDER_MOVED		0x0400~0xBFFF</PRE><BR>If 
+                                it still doesn't work,<BR>Set three breakpoints 
+                                and execute in debug(F5) mode.<BR>
+                                <OL><BR>
+                                <LI>line #963 of BitmapSlider.cpp<BR>
+                                <LI>line #673 of BitmapSlider.cpp<BR>
+                                <LI>line #265 of DemoDlg.cpp<BR></LI></OL><BR>If 
+                                message handler(3rd one) is called without 
+                                posting message(1st and 2nd one), it means 
+                                message number is duplicated.<BR><BR>Please let 
+                                me know if there is more suitable way to define 
+                                an user message or if it is not the reason of 
+                                problem.<BR>Thanks to your 
+                                inform.<BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=616375">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=616375">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=615911&amp;forumid=16628&amp;select=616375#xx616375xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=616375#xx616375xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=616375"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=616375"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(213071,616375);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=1168564_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx1168564xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=36><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=1168564#xx1168564xx" 
+                        name=1168564>Re: Crashes in debug mode.</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=668900"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle>hannahb&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>11:29 20 Jul 
+                        '05&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=1168564_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=36><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>I am 
+                                not on my home machine, so I don't have my 
+                                sample code, but there is a 
+                                function<BR>RegisterWindowsMessage that should 
+                                dynamically give you a unique UINT back, to 
+                                guarantee you are not 
+                                duplicating.<BR><BR>Brad<BR><BR><SMALL><B>Joon-ho 
+                                Ryu wrote:</B></SMALL><BR><I>If message 
+                                handler(3rd one) is called without posting 
+                                message(1st and 2nd one), it means message 
+                                number is duplicated.<BR><BR>Please let me know 
+                                if there is more suitable way to define an user 
+                                message or if it is not the reason of 
+                                problem.<BR>Thanks to your 
+                                inform.</I><BR><BR><BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1168564">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1168564">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=615911&amp;forumid=16628&amp;select=1168564#xx1168564xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=1168564#xx1168564xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1168564"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=1168564"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(668900,1168564);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=614543_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx614543xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=614543#xx614543xx" 
+                        name=614543><B>Cool!</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=7694"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle><B>Juan 
+                        Carlos Cobas</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>4:33 19 Sep 
+                        '03</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=614543_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT 
+                                class=messagecontent>Congrats for such a great 
+                                control <IMG 
+                                src="BitmapSlider_files/smiley_smile.gif" 
+                                align=absMiddle><BR><BR>Keep up the good 
+                                work!<BR><BR>Carlos <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614543">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614543">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=614543&amp;forumid=16628&amp;select=614543#xx614543xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=614543#xx614543xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614543"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614543"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(7694,614543);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=614688_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx614688xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=18><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=614688#xx614688xx" 
+                        name=614688>Re: Cool!</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=213071"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Joon-ho 
+                        Ryu&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>7:46 19 Sep 
+                        '03&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=614688_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=18><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Thank 
+                                you very much! <IMG 
+                                src="BitmapSlider_files/smiley_biggrin.gif" 
+                                align=absMiddle> <BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614688">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614688">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=614543&amp;forumid=16628&amp;select=614688#xx614688xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=614688#xx614688xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614688"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614688"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(213071,614688);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR height=1>
+                <TD bgColor=#ff9900><IMG height=1 
+                  src="BitmapSlider_files/t.gif" width=1></TD></TR>
+              <TR id=614514_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx614514xx></A><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=614514#xx614514xx" 
+                        name=614514><B>You got my 5</B></A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=450325"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT 
+                        class=messagetitle><B>abhinaba</B>&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle><B>3:47 19 Sep 
+                        '03</B>&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=614514_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT 
+                                class=messagecontent>Excellent control. I was 
+                                planning to create something similar for 
+                                CodeProject. Think I need to drop the idea <IMG 
+                                src="BitmapSlider_files/smiley_frown.gif" 
+                                align=absMiddle> 
+                                <BR><BR>==========================<BR>AB =&gt; 
+                                Code and let 
+                                code<BR>==========================<BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614514">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614514">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=614514&amp;forumid=16628&amp;select=614514#xx614514xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=614514#xx614514xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614514"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614514"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(450325,614514);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR>
+              <TR id=614682_h0 bgColor=#fef9e7>
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white><A name=xx614682xx></A><IMG height=1 
+                        src="BitmapSlider_files/ind.gif" width=18><IMG 
+                        src="BitmapSlider_files/news_general.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD class=messagetitle width="100%"><A 
+                        class=messagetitle id=DynMessLink 
+                        href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;select=614682#xx614682xx" 
+                        name=614682>Re: You got my 5</A></TD>
+                      <TD vAlign=bottom><A 
+                        href="http://www.codeproject.com/script/profile/whos_who.asp?id=213071"><IMG 
+                        title="Click for User Profile" height=15 
+                        src="BitmapSlider_files/userinfo.gif" width=14 
+                        border=0></A>&nbsp;</TD>
+                      <TD noWrap width=140><FONT class=messagetitle>Joon-ho 
+                        Ryu&nbsp;</FONT></TD>
+                      <TD style="WIDTH: 9em" noWrap align=right 
+                        width=120><FONT class=messagetitle>7:40 19 Sep 
+                        '03&nbsp;</FONT></TD></TR></TBODY></TABLE></TD></TR>
+              <TR id=614682_h1 style="DISPLAY: none">
+                <TD width="100%">
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=1 src="BitmapSlider_files/ind.gif" 
+                        width=18><IMG src="BitmapSlider_files/news_blank.gif" 
+                        align=absMiddle>&nbsp;</TD>
+                      <TD width="100%" bgColor=#d5eaff>
+                        <TABLE cellSpacing=5 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD colSpan=2><FONT class=messagecontent>Thank 
+                                you. <IMG 
+                                src="BitmapSlider_files/smiley_smile.gif" 
+                                align=absMiddle><BR>Oh, why don't you share your 
+                                plan with others?<BR>If you play a role in this 
+                                control, it will be good for 
+                                everyone.<BR>&nbsp;</FONT></TD></TR>
+                                <TR vAlign=top>
+                                <TD class=messagetitle>[<A 
+                                title="Reply to this current thread" 
+                                href="http://www.codeproject.com/script/comments/user_reply.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614682">Reply</A>][<A 
+                                title="Email a reply to the author of this message" 
+                                href="http://www.codeproject.com/script/comments/user_mail.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614682">Email</A>][<A 
+                                title="View only messages within this thread" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;tid=614514&amp;forumid=16628&amp;select=614682#xx614682xx">View 
+                                Thread</A>][<A 
+                                title="Get the URL for this message" 
+                                href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?msg=614682#xx614682xx">Get 
+                                Link</A>]</TD>
+                                <TD class=messagetitle align=right>[<A 
+                                href="http://www.codeproject.com/script/comments/owner_modify_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614682"><I>Modify</I></A>|<A 
+                                href="http://www.codeproject.com/script/comments/owner_delete_pw.asp?main=/staticctrl/CBitmapSlider.asp&amp;df=100&amp;forumid=16628&amp;select=614682"><I>Delete</I></A>]<BR>
+                                <SCRIPT language=Javascript>MsgVoteForm(213071,614682);</SCRIPT>
+                                </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD><IMG height=5 src="BitmapSlider_files/t.gif" width=1 
+                  border=0></TD></TR></TBODY></TABLE></TD></TR>
+        <TR bgColor=#fbedbb>
+          <TD>
+            <TABLE cellPadding=2 width="100%">
+              <TBODY>
+              <TR>
+                <TD class=messagetitle>Last Visit: 21:28 Thursday 29th 
+                  September, 2005</TD>
+                <TD noWrap align=right><FONT class=messagetitle><SPAN 
+                  class=HoverLink>First</SPAN> <SPAN class=HoverLink>Prev</SPAN> 
+                  <A class=HoverLink 
+                  href="http://www.codeproject.com/staticctrl/CBitmapSlider.asp?df=100&amp;forumid=16628&amp;fr=26" 
+                  name=HoverNL>Next</A> <SPAN 
+                  class=HoverLink>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN> 
+              </FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<P class=smallText><IMG src="BitmapSlider_files/news_general.gif" 
+align=absMiddle> General comment &nbsp;&nbsp; <IMG 
+src="BitmapSlider_files/news_info.gif" align=absMiddle> News / Info &nbsp;&nbsp; 
+<IMG src="BitmapSlider_files/news_question.gif" align=absMiddle> Question 
+&nbsp;&nbsp; <IMG src="BitmapSlider_files/news_answer.gif" align=absMiddle> 
+Answer &nbsp;&nbsp; <IMG src="BitmapSlider_files/news_game.gif" align=absMiddle> 
+Joke / Game &nbsp;&nbsp; <IMG src="BitmapSlider_files/news_sticky.gif" 
+align=absMiddle> Admin message</P><BR>
+<TABLE cellSpacing=5 width="100%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD><FONT style="FONT-SIZE: 7pt" size=1><A 
+      href="http://www.codeproject.com/?cat=1">All Topics</A>, <A 
+      href="http://www.codeproject.com/?cat=2">MFC / C++</A> &gt;&gt; <A 
+      href="http://www.codeproject.com/staticctrl/">Static Controls</A> &gt;&gt; 
+      <A href="http://www.codeproject.com/staticctrl/#Custom+Controls">Custom 
+      Controls</A> <BR>Updated: 19 Sep 2003 </FONT></TD>
+    <TD align=right><FONT style="FONT-SIZE: 7pt" size=1>Article content 
+      copyright Junho Ryu, 2003<BR>everything else Copyright © <A 
+      href="mailto:webmaster@codeproject.com">CodeProject</A>, 1999-2005</A>. 
+      <BR><A href="http://www.codeproject.com/info/MediaKit">Advertise on The 
+      Code Project</A> | <A 
+      href="http://www.codeproject.com/info/privacy.asp">Privacy</A> 
+  </FONT></TD></TR></TBODY></TABLE><BR>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" border=0>
+  <TBODY>
+  <TR>
+    <TD bgColor=#ff9900 height=1><IMG height=1 
+      src="BitmapSlider_files/space.gif"></TD></TR>
+  <TR>
+    <TD align=middle><FONT size=1><A 
+      href="http://www.theultimatetoolbox.com/">The Ultimate Toolbox</A> • <A 
+      href="http://www.codeproject.com/redir.asp?id=235">MSDN Communities</A> | 
+      <A href="http://www.aspalliance.com/">ASP Alliance</A> • <A 
+      href="http://www.developerfusion.co.uk/">Developer Fusion</A> • <A 
+      href="http://www.developersdex.com/">Developersdex</A> • <A 
+      href="http://www.devguru.com/">DevGuru</A> • <A 
+      href="http://www.programmersheaven.com/">Programmers Heaven</A> • <A 
+      href="http://www.planet-source-code.com/">Planet Source Code</A> • <A 
+      href="http://www.tek-tips.com/">Tek-Tips Forums</A> • 
+</FONT></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

@@ -1,0 +1,8 @@
+; MINISAPI.def : declares the module parameters for the DLL.
+
+LIBRARY	     "MINISAPI"
+
+EXPORTS
+	HttpExtensionProc
+	GetExtensionVersion
+	TerminateExtension

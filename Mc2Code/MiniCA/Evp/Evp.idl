@@ -1,0 +1,38 @@
+// Evp.idl : IDL source for Evp.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Evp.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(8EFC7B70-6A2B-4AB0-B262-E2F21D1D5F1C),
+		dual,
+		helpstring("IEvpShell Interface"),
+		pointer_default(unique)
+	]
+	interface IEvpShell : IDispatch
+	{
+	};
+
+[
+	uuid(02A8D55B-6BE6-43C3-A6B9-DF79B93218F0),
+	version(1.0),
+	helpstring("Evp 1.0 Type Library")
+]
+library EVPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(B0FD5B80-29B9-4B37-B0B7-16823C533299),
+		helpstring("EvpShell Class")
+	]
+	coclass EvpShell
+	{
+		[default] interface IEvpShell;
+	};
+};

@@ -1,0 +1,56 @@
+# Microsoft Developer Studio Generated Dependency File, included by CA.mak
+
+.\CA.cpp : \
+	"..\..\openssl\openssl\aes.h"\
+	"..\..\openssl\openssl\asn1.h"\
+	"..\..\openssl\openssl\bio.h"\
+	"..\..\openssl\openssl\blowfish.h"\
+	"..\..\openssl\openssl\bn.h"\
+	"..\..\openssl\openssl\cast.h"\
+	"..\..\openssl\openssl\conf.h"\
+	"..\..\openssl\openssl\crypto.h"\
+	"..\..\openssl\openssl\des.h"\
+	"..\..\openssl\openssl\des_old.h"\
+	"..\..\openssl\openssl\dh.h"\
+	"..\..\openssl\openssl\dsa.h"\
+	"..\..\openssl\openssl\e_os2.h"\
+	"..\..\openssl\openssl\engine.h"\
+	"..\..\openssl\openssl\err.h"\
+	"..\..\openssl\openssl\evp.h"\
+	"..\..\openssl\openssl\idea.h"\
+	"..\..\openssl\openssl\lhash.h"\
+	"..\..\openssl\openssl\md2.h"\
+	"..\..\openssl\openssl\md4.h"\
+	"..\..\openssl\openssl\md5.h"\
+	"..\..\openssl\openssl\mdc2.h"\
+	"..\..\openssl\openssl\obj_mac.h"\
+	"..\..\openssl\openssl\objects.h"\
+	"..\..\openssl\openssl\opensslconf.h"\
+	"..\..\openssl\openssl\opensslv.h"\
+	"..\..\openssl\openssl\ossl_typ.h"\
+	"..\..\openssl\openssl\pem.h"\
+	"..\..\openssl\openssl\pem2.h"\
+	"..\..\openssl\openssl\pkcs12.h"\
+	"..\..\openssl\openssl\pkcs7.h"\
+	"..\..\openssl\openssl\rand.h"\
+	"..\..\openssl\openssl\rc2.h"\
+	"..\..\openssl\openssl\rc4.h"\
+	"..\..\openssl\openssl\rc5.h"\
+	"..\..\openssl\openssl\ripemd.h"\
+	"..\..\openssl\openssl\rsa.h"\
+	"..\..\openssl\openssl\safestack.h"\
+	"..\..\openssl\openssl\sha.h"\
+	"..\..\openssl\openssl\stack.h"\
+	"..\..\openssl\openssl\symhacks.h"\
+	"..\..\openssl\openssl\ui.h"\
+	"..\..\openssl\openssl\ui_compat.h"\
+	"..\..\openssl\openssl\x509.h"\
+	"..\..\openssl\openssl\x509_vfy.h"\
+	"..\..\openssl\openssl\x509v3.h"\
+	".\CA.H"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"d:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

@@ -1,0 +1,22 @@
+; CA.def : Declares the module parameters for the DLL.
+
+LIBRARY      "CA"
+DESCRIPTION  'CA Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CertFormatConver	;编码转换
+	ParsePfx			;分解P12包文件
+	CreatePfx			;创建P12包文件	
+	ChangePfxPwd		;修改密码P12包文件
+	MakeRoot			;创建自签名证书(根证书)
+	MakeReq				;创建证书请求文件
+	MakeCert			;创建证书文件
+	DirectCert			;直接创建公私钥（内存）
+	MakeCrl				;生成黑名单
+	CertPairCheck		;检验公钥、私钥是否配对
+	CheckCertWithCrl	;黑名单验证证书
+	CheckCertWithRoot	;根证书验证证书
+	CheckCertLife		;检查证书有效期
+	CreateP7b			;创建P7格式证书
+	ParseP7b			;分解P7为公钥证书或(和)CRL或(和)更改P7格式

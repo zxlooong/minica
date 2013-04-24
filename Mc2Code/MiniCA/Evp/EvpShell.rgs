@@ -1,0 +1,23 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {B0FD5B80-29B9-4B37-B0B7-16823C533299} = s 'EvpShell Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove evpfile
+    {
+        NoRemove ShellEx
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove EvpShell = s '{B0FD5B80-29B9-4B37-B0B7-16823C533299}'
+            }
+        }
+    }
+}

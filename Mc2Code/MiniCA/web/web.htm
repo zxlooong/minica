@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>MiniCA</title>
+<style type="text/css">
+<!--
+td {
+	font-size: 12px;
+}
+-->
+</style>
+</head>
+
+<body>
+<FORM  name=formInfo>
+<table width="555"  border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#008080">
+    <td height="20" colspan="2">
+      
+<b>用户信息:</b> </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">姓名：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="64" SIZE="42" NAME="tbCommonName" value="hpxs" id="CN">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">电子邮件：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="128" SIZE="42" NAME="tbEmail" value="hpxs@hotmail.com" id="emailAddress">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">身份证号码：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="128" SIZE="42" NAME="tbId" value="13020319770306****" id="0.9.2342.19200300.100.1.1">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">公司：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="64" SIZE="42" NAME="tbOrg" value="MiniSoft" id="O">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">部门：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="64" SIZE="42" NAME="tbOrgUnit" value="MiniCA" id="OU">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">街道：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="128" SIZE="42" NAME="tbStreet" value="金光大道" id="2.5.4.9">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">邮政信箱：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="128" SIZE="42" NAME="tbMailBox" value="金光8888" id="2.5.4.18">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">邮政编码：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="2" SIZE="42" NAME="tbPostalCode" value="888888" id="2.5.4.17">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">手机号码：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="2" SIZE="42" NAME="tbMobileTelephone" value="13810914393" id="0.9.2342.19200300.100.1.41">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">市/县：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="128" SIZE="42" NAME="tbLocality" value="石家庄" id="L">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">省：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="128" SIZE="42" NAME="tbState" value="河北" id="ST">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">国家：</td>
+    <td height="20">
+      <input TYPE="TEXT" MAXLENGTH="2" SIZE="42" NAME="tbCountry" value="中国" id="C">
+    </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">&nbsp;</td>
+    <td height="20">&nbsp;</td>
+  </tr>
+  <tr align="left" bgcolor="#008080">
+    <td height="20" colspan="2">
+     
+      <span lang="EN-US" style="font-size:10.0pt"><b>证书类型:</b> </td>
+  </tr>
+  <tr>
+    <td height="20" colspan="2">
+	  <input type="radio" name="R1" value="V0" onclick="func_R1()" checked>自定证书
+	  <input type="radio" name="R1" value="V1" onclick="func_R2()">代码签名
+	  <input type="radio" name="R1" value="V2" onclick="func_R3()">计算机 
+	  <input type="radio" name="R1" value="V3" onclick="func_R4()">WEB服务 
+      <input type="radio" name="R1" value="V4" onclick="func_R5()">客户端
+	  <input type="radio" name="R1" value="V5" onclick="func_R6()">信任列表签名
+	  <br>
+	  <input type="radio" name="R1" value="V6" onclick="func_R7()">时间戳
+	  <input type="radio" name="R1" value="V7" onclick="func_R8()">IPSEC
+	  <input type="radio" name="R1" value="V8" onclick="func_R9()">安全Email 
+      <input type="radio" name="R1" value="V9" onclick="func_R10()">智能卡登陆
+	  </td>
+  <tr align="left" bgcolor="#008080">
+    <td height="20" colspan="2">
+     
+      <span lang="EN-US" style="font-size:10.0pt"><b>密钥用法:</b> </td>
+  </tr>
+  <tr>
+    <td height="20" colspan="2">
+	  <input type="checkbox" name="C1" value="Digital Signature">数字签名
+	  <input type="checkbox" name="C2" value="Non Repudiation">认可签名
+	  <input type="checkbox" name="C3" value="Key Encipherment">密钥加密
+      <input type="checkbox" name="C4" value="Data Encipherment">数据加密
+	  <input type="checkbox" name="C5" value="Key Agreement">密钥协商
+	  <br>
+	  <input type="checkbox" name="C6" value="Key CertSign">证书签名
+	  <input type="checkbox" name="C7" value="Crl Sign">CRL签名
+	  <input type="checkbox" name="C8" value="Encipher Only">仅仅加密
+      <input type="checkbox" name="C9" value="Decipher Only">仅仅解密
+	  </td>  
+  </tr>
+    <tr align="left" bgcolor="#008080">
+    <td height="20" colspan="2">
+     
+      <span lang="EN-US" style="font-size:10.0pt"><b>增强密钥用法:</b> </td>
+  </tr>
+  <tr>
+    <td height="20" colspan="2">
+	  <input type="checkbox" name="C10" value="1.3.6.1.4.1.311.10.3.1">信任列表签名
+	  <input type="checkbox" name="C11" value="1.3.6.1.4.1.311.10.3.10">合格部署
+	  <input type="checkbox" name="C12" value="1.3.6.1.4.1.311.10.3.11">密钥恢复
+      <input type="checkbox" name="C13" value="1.3.6.1.4.1.311.10.6.2" checked>许可证服务器确认
+	  <input type="checkbox" name="C14" value="1.3.6.1.4.1.311.10.3.13">生存时间签名
+	  <input type="checkbox" name="C15" value="1.3.6.1.4.1.311.10.3.2">MS时间戳
+	  <input type="checkbox" name="C16" value="1.3.6.1.4.1.311.10.3.4">加密文件系统
+	  <input type="checkbox" name="C17" value="1.3.6.1.4.1.311.10.3.4.1">文件故障恢复
+      <input type="checkbox" name="C18" value="1.3.6.1.4.1.311.10.3.9">根列表签名者
+
+      <input type="checkbox" name="C10" value="1.3.6.1.4.1.311.10.5.1">数字权利
+	  <input type="checkbox" name="C11" value="1.3.6.1.4.1.311.10.6.1">密钥包许可证
+	  <input type="checkbox" name="C12" value="1.3.6.1.4.1.311.10.3.12">文档签名
+      <input type="checkbox" name="C13" value="1.3.6.1.4.1.311.20.2.1" checked>证书申请代理
+	  <input type="checkbox" name="C14" value="1.3.6.1.4.1.311.20.2.2">智能卡登陆
+	  <input type="checkbox" name="C15" value="1.3.6.1.4.1.311.21.5">私钥存档
+	  <input type="checkbox" name="C16" value="1.3.6.1.4.1.311.10.3.5">驱动程序验证
+	  <input type="checkbox" name="C17" value="1.3.6.1.4.1.311.21.6">密钥恢复代理
+      <input type="checkbox" name="C18" value="1.3.6.1.5.5.7.3.3">代码签名
+<BR>
+	  <input type="checkbox" name="C10" value="1.3.6.1.5.5.7.3.8">时间戳
+	  <input type="checkbox" name="C11" value="1.3.6.1.5.5.7.3.2 ">客户端验证
+	  <input type="checkbox" name="C12" value="1.3.6.1.5.5.7.3.4">安全电子邮件
+      <input type="checkbox" name="C13" value="1.3.6.1.5.5.7.3.1" checked>服务器验证
+	  <input type="checkbox" name="C14" value="1.3.6.1.5.5.7.3.7">IP安全用户-
+	  <input type="checkbox" name="C15" value="1.3.6.1.5.5.8.2.2">IP安全IKE中级
+	  <input type="checkbox" name="C16" value="1.3.6.1.4.1.311.10.3.7">OEM windows 系统组件验证
+	  <input type="checkbox" name="C17" value="1.3.6.1.5.5.7.3.5">IP安全终端系统
+      <input type="checkbox" name="C18" value="1.3.6.1.5.5.7.3.6">IP安全隧道中止
+	  <input type="checkbox" name="C15" value="1.3.6.1.4.1.311.21.19">目录服务电子邮件复制
+	  <input type="checkbox" name="C16" value="1.3.6.1.4.1.311.10.3.8">内嵌windows系统组件验证
+	  <input type="checkbox" name="C17" value="1.3.6.1.4.1.311.10.3.6">windows系统组件验证
+      <input type="checkbox" name="C18" value="2.5.29.32.0">所有颁发的策略
+
+	  </td>
+  <tr>
+    <td width="100" height="20" align="right">&nbsp;</td>
+    <td height="20">&nbsp;</td>
+  </tr>
+  <tr bgcolor="#008080">
+    <td height="20" colspan="2">
+      <b>密钥选项:</b>
+      </td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">好记名称：</td>
+    <td height="20"><input type="text" name="FriendName" value="MiniCA" size="20"></td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">密钥长度：</td>
+    <td height="20"><input type="text" name="CertKeyLen" value="1024" size="20"></td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">有效期：</td>
+    <td height="20"><input type="text" name="CertValidity" value="365" size="20"></td>
+  </tr>
+  <tr>
+    <td width="100" height="20" align="right">&nbsp;</td>
+    <td height="20">&nbsp;</td>
+  </tr>
+  <input type=hidden name=KeyUsage>
+  <input type=hidden name=EkeyUsage>
+  <input type=hidden name=CertType>
+
+
+</FORM> 
+<script language=javascript>
+function func_R1()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R2()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R3()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R4()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R5()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R6()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R7()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R8()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R9()
+{
+	document.formInfo.C1.checked=true;
+}
+function func_R10()
+{
+	document.formInfo.C1.checked=true;
+}
+
+</script>
+
+
+
+
+<form name=formPost action="\scripts\MiniSapi.dll" onsubmit="Apply()" METHOD=POST>
+<td colspan=4 align=center>
+<input type="hidden" name="MfcISAPICommand" value="CertReq"> 
+<input type=hidden name=UserInfo>
+<input type=hidden name=KeyUsage>
+<input type=hidden name=EkeyUsage>
+<input type=hidden name=FriendName>
+<input type=hidden name=CertKeyLen>
+<input type=hidden name=CertValidity>
+<input type=hidden name=CertType>
+<tr align="center">
+	<td height="20" colspan="2"><input type="submit" value="申请证书" ></td>
+</tr>
+</form>
+<script language=javascript>
+function Apply()
+{
+	//用户信息
+	document.formPost.UserInfo.value ="";
+	document.formPost.UserInfo.value += formInfo.tbCommonName.id + "=" + formInfo.tbCommonName.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbEmail.id + "=" + formInfo.tbEmail.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbId.id + "=" + formInfo.tbId.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbOrg.id + "=" + formInfo.tbOrg.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbOrgUnit.id + "=" + formInfo.tbOrgUnit.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbStreet.id + "=" + formInfo.tbStreet.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbMailBox.id + "=" + formInfo.tbMailBox.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbPostalCode.id + "=" + formInfo.tbPostalCode.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbMobileTelephone.id + "=" + formInfo.tbMobileTelephone.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbLocality.id + "=" + formInfo.tbLocality.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbState.id + "=" + formInfo.tbState.value;
+
+	document.formPost.UserInfo.value += " ";
+	document.formPost.UserInfo.value += formInfo.tbCountry.id + "=" + formInfo.tbCountry.value;
+
+	//密钥用途
+	document.formPost.KeyUsage.value = formInfo.KeyUsage.value;
+
+	//扩展密钥用途
+	document.formPost.EkeyUsage.value = formInfo.EkeyUsage.value ;
+
+	//好记名称
+	document.formPost.FriendName.value = formInfo.FriendName.value ;
+
+	//密钥长度
+	document.formPost.CertKeyLen.value = formInfo.CertKeyLen.value ;
+
+	//有效期
+	document.formPost.CertValidity.value = formInfo.CertValidity.value ;
+
+	//证书类型
+	document.formPost.CertType.value = formInfo.CertType.value ;
+}
+</script>
+</table>
+</body>
+</html>
